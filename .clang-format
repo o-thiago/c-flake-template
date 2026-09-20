@@ -1,0 +1,10 @@
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+
+BreakBeforeBraces: Linux
+PointerAlignment: Right
+SpaceBeforeParens: ControlStatements
+RemoveBracesLLVM: true
+
+ColumnLimit: 80

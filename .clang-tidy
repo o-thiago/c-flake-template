@@ -1,0 +1,42 @@
+---
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  misc-*,
+  cert-*,
+  llvm-*,
+  -llvm-header-guard,
+  -cert-*-cpp,
+  -misc-no-recursion,
+  -bugprone-easily-swappable-parameters,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -*braces-around-statements,
+  -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
+  -clang-analyzer-security.insecureAPI.strcpy,
+  -clang-analyzer-security.insecureAPI.bcopy,
+  -clang-analyzer-security.insecureAPI.vfork
+
+HeaderFilterRegex: '.*'
+FormatStyle: file
+
+CheckOptions:
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+
+  - key: readability-identifier-naming.ConstantCase
+    value: lower_case
+
+  - key: readability-identifier-naming.EnumConstantCase
+    value: UPPER_CASE
+
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+
+  - key: readability-identifier-naming.IgnoreMainLikeFunctions
+    value: true
+...
