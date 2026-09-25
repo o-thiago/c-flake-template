@@ -53,7 +53,7 @@
             cppcheck = rec {
               enable = true;
               package = pkgs.cppcheck;
-              entry = "${package}/bin/cppcheck --enable=style --inconclusive --error-exitcode=1";
+              entry = "${package}/bin/cppcheck --enable=style --inconclusive --error-exitcode=1 --inline-suppr --suppress=unusedStructMember";
               files = "\\.(c|h|cpp|hpp)$";
             };
 

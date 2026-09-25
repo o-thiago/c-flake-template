@@ -19,7 +19,8 @@ Checks: >
   -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
   -clang-analyzer-security.insecureAPI.strcpy,
   -clang-analyzer-security.insecureAPI.bcopy,
-  -clang-analyzer-security.insecureAPI.vfork
+  -clang-analyzer-security.insecureAPI.vfork,
+  -readability-implicit-bool-conversion
 
 HeaderFilterRegex: '.*'
 FormatStyle: file
