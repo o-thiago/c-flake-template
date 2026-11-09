@@ -20,6 +20,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Interface target for project-wide warning levels
 add_library(project_warnings INTERFACE)
+target_compile_definitions(project_warnings INTERFACE _DEFAULT_SOURCE)
 target_compile_options(
   project_warnings
   INTERFACE -Werror

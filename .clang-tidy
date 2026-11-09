@@ -13,6 +13,7 @@ Checks: >
   -cert-*-cpp,
   -misc-no-recursion,
   -bugprone-easily-swappable-parameters,
+  -bugprone-multi-level-implicit-pointer-conversion,
   -readability-identifier-length,
   -readability-magic-numbers,
   -*braces-around-statements,
@@ -31,6 +32,9 @@ CheckOptions:
 
   - key: readability-identifier-naming.ConstantCase
     value: lower_case
+
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: UPPER_CASE
 
   - key: readability-identifier-naming.EnumConstantCase
     value: UPPER_CASE

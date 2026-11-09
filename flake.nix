@@ -65,6 +65,8 @@
           devShells.default = pkgs.mkShell.override { inherit (llvm) stdenv; } {
             CMAKE_GENERATOR = "Ninja";
             C_STANDARD = "23";
+            CC = "clang";
+            CXX = "clang++";
 
             shellHook =
               #bash
@@ -75,13 +77,13 @@
 
             packages =
               (with llvm; [
+                clang-tools
                 lldb
               ])
               ++ (with pkgs; [
                 # Build & Compilers
                 cmake
                 ninja
-                gcc
 
                 # Language Servers for editors
                 nil
